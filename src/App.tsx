@@ -1,19 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
-import SectionCollections from "./components/SectionCollections";
-import SectionTop from "./components/SectionTop";
+import Home from "./pages/Home";
+import Perfumes from "./pages/Perfumes";
+import Cart from "./pages/Cart";
+
 
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header/>
-      <main className="main">
-        <div className="container">
-          <SectionTop/>
-          <SectionCollections/>
-        </div>
-      </main>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/perfumes" element={<Perfumes/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
   );
 }
 
