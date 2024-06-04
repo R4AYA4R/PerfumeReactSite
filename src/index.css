@@ -67,3 +67,155 @@ a{
   bottom: -5px;
   right: -5px;
 }
+.sectionTop{
+  padding: 60px 0;
+}
+.sectionTop__top-info{
+  margin-left: 200px;
+  text-align: center;
+  max-width: 330px;
+}
+.sectionTop__top{
+  margin-bottom: 70px;
+  padding: 90px 0 60px 0;
+  background-image: url('/public//images/sectionTop/Frame\ 48.png');
+}
+
+.info__subtitle{
+  font-size: 14px;
+  font-weight: 400;
+  color:#000;
+  margin-bottom: 16px;
+}
+.info__title{
+  font-size: 64px;
+  font-weight: 500;
+  color:#000;
+  margin-bottom: 30px;
+}
+.info__link{
+  font-size: 14px;
+  color:#fff;
+  font-weight: 500;
+  padding: 15px 50px;
+  background-color: #BE5B75;
+  opacity: 1;
+  transition:opacity .3s ease;
+}
+.info__link:hover{
+  opacity: 0.5;
+}
+.sectionTop__bottom{
+  padding: 55px 0;
+  background-image: url('/public/images/sectionTop/Frame\ 49.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionTop__bottom-info{
+  margin-left: 95px;
+}
+.bottom__info-title{
+  font-size: 48px;
+  font-weight: 700;
+  color:#000;
+  margin-bottom: 19px;
+  text-transform: uppercase;
+}
+.bottom__info-link{
+  background-color: #4D2952;
+  padding: 15px 45px;
+  color:#fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition:opacity .3s ease;
+  opacity: 1;
+}
+.bottom__info-link:hover{
+  opacity: 0.5;
+}
+.sectionTop__bottom-img{
+  margin-right: 100px;
+}
+.sectionCollections{
+  padding-bottom: 60px;
+}
+.sectionCollections__info{
+  margin-bottom: 50px;
+  text-align: center;
+}
+.sectionCollections__info-title{
+  font-size: 30px;
+  font-weight: 700;
+  color:#000;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+.sectionCollections__info-subtitle{
+  font-size: 15px;
+  font-weight: 400;
+  color:#000;
+  margin-bottom: 30px;
+}
+.sectionCollections__info-link{
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 50px;
+  color:#000;
+  background-color: #fff;
+  border:1px solid #898989;
+  text-transform: uppercase;
+  opacity: 1;
+  transition:opacity .3s ease;
+}
+.sectionCollections__info-link:hover{
+  opacity: 0.5;
+}
+.sectionCollections__collections{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:30px;
+}
+.sectionCollections__collections-item{
+  text-align: center;
+  padding: 140px 0 100px 0;
+}
+.womens-item{
+  background-image: url('/public/images/sectionCollections/Frame\ 13.png');
+}
+.mens-item{
+  background-image: url('/public/images/sectionCollections/Component\ 51.png');
+}
+.haircare-item{
+  background-image: url('/public/images/sectionCollections/Component\ 28.png');
+}
+.skincare-item{
+  background-image: url('/public/images/sectionCollections/Component\ 31.png');
+}
+.giftsets-item{
+  background-image: url('/public/images/sectionCollections/Component\ 33.png');
+}
+.bestsellers-item{
+  background-image: url('/public/images/sectionCollections/Component\ 32.png');
+}
+.collections__item-title{
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color:#fff;
+  text-transform: uppercase;
+}
+.collections__item-link{
+  color:#fff;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 400;
+  transition:opacity .3s ease;
+}
+.collections__item-link:hover{
+  opacity: 0.7;
+}
