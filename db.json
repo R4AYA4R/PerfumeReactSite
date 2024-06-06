@@ -1,124 +1,236 @@
 {
-    "perfumes":[
+    "perfumes": [
         {
-            "id":1,
-            "title":"Bulgari Extreme",
-            "category":"Spicy",
-            "price":51.74,
-            "count":1,
-            "totalPrice":51.74
+            "id": 1,
+            "title": "Bulgari Extreme",
+            "category": "Spicy",
+            "price": 51.74,
+            "count": 1,
+            "totalPrice": 51.74
         },
         {
-            "id":2,
-            "title":"Armaf Passion",
-            "category":"Sweet",
-            "price":45.74,
-            "count":1,
-            "totalPrice":45.74
+            "id": 2,
+            "title": "Armaf Passion",
+            "category": "Sweet",
+            "price": 45.74,
+            "count": 1,
+            "totalPrice": 45.74
         },
         {
-            "id":3,
-            "title":"Alterna",
-            "category":"Bitter",
-            "price":44.34,
-            "count":1,
-            "totalPrice":44.34
+            "id": 3,
+            "title": "Alterna",
+            "category": "Bitter",
+            "price": 44.34,
+            "count": 1,
+            "totalPrice": 44.34
         },
         {
-            "id":4,
-            "title":"Beyonce",
-            "category":"Vigorous",
-            "price":31,
-            "count":1,
-            "totalPrice":31
+            "id": 4,
+            "title": "Beyonce",
+            "category": "Vigorous",
+            "price": 31,
+            "count": 1,
+            "totalPrice": 31
         },
         {
-            "id":5,
-            "title":"Bondi Sands",
-            "category":"Spicy",
-            "price":38,
-            "count":1,
-            "totalPrice":38
+            "id": 5,
+            "title": "Bondi Sands",
+            "category": "Spicy",
+            "price": 38,
+            "count": 1,
+            "totalPrice": 38
         },
         {
-            "id":6,
-            "title":"Brut",
-            "category":"Vigorous",
-            "price":25.53,
-            "count":1,
-            "totalPrice":25.53
+            "id": 6,
+            "title": "Brut",
+            "category": "Vigorous",
+            "price": 25.53,
+            "count": 1,
+            "totalPrice": 25.53
         },
         {
-            "id":7,
-            "title":"Fendi",
-            "category":"Bitter",
-            "price":14.81,
-            "count":1,
-            "totalPrice":14.81
+            "id": 7,
+            "title": "Fendi",
+            "category": "Bitter",
+            "price": 14.81,
+            "count": 1,
+            "totalPrice": 14.81
         },
         {
-            "id":8,
-            "title":"Ghost",
-            "category":"Sweet",
-            "price":12,
-            "count":1,
-            "totalPrice":12
+            "id": 8,
+            "title": "Ghost",
+            "category": "Sweet",
+            "price": 12,
+            "count": 1,
+            "totalPrice": 12
         },
         {
-            "id":9,
-            "title":"Hollister",
-            "category":"Sweet",
-            "price":89.99,
-            "count":1,
-            "totalPrice":89.99
+            "id": 9,
+            "title": "Hollister",
+            "category": "Sweet",
+            "price": 89.99,
+            "count": 1,
+            "totalPrice": 89.99
         },
         {
-            "id":10,
-            "title":"Jacques Bogart",
-            "category":"Bitter",
-            "price":33,
-            "count":1,
-            "totalPrice":33
+            "id": 10,
+            "title": "Jacques Bogart",
+            "category": "Bitter",
+            "price": 33,
+            "count": 1,
+            "totalPrice": 33
         },
         {
-            "id":11,
-            "title":"Karl Lagerfeld",
-            "category":"Spicy",
-            "price":17.67,
-            "count":1,
-            "totalPrice":17.67
+            "id": 11,
+            "title": "Karl Lagerfeld",
+            "category": "Spicy",
+            "price": 17.67,
+            "count": 1,
+            "totalPrice": 17.67
         },
         {
-            "id":12,
-            "title":"Lalique",
-            "category":"Vigorous",
-            "price":20,
-            "count":1,
-            "totalPrice":20
+            "id": 12,
+            "title": "Lalique",
+            "category": "Vigorous",
+            "price": 20,
+            "count": 1,
+            "totalPrice": 20
         },
         {
-            "id":13,
-            "title":"Maison Margiela",
-            "category":"Spicy",
-            "price":24.22,
-            "count":1,
-            "totalPrice":24.22
+            "id": 13,
+            "title": "Maison Margiela",
+            "category": "Spicy",
+            "price": 24.22,
+            "count": 1,
+            "totalPrice": 24.22
         },
         {
-            "id":14,
-            "title":"Thameen",
-            "category":"Bitter",
-            "price":27.48,
-            "count":1,
-            "totalPrice":27.48
+            "id": 14,
+            "title": "Thameen",
+            "category": "Bitter",
+            "price": 27.48,
+            "count": 1,
+            "totalPrice": 27.48
         },
         {
-            "id":15,
-            "title":"Stella McCartney",
-            "category":"Bitter",
-            "price":11,
-            "count":1,
-            "totalPrice":11
+            "id": 15,
+            "title": "Stella McCartney",
+            "category": "Bitter",
+            "price": 11,
+            "count": 1,
+            "totalPrice": 11
+        },
+        {
+            "id": 16,
+            "title": "Ralph Lauren",
+            "category": "Sweet",
+            "price": 12.5,
+            "count": 1,
+            "totalPrice": 12.5
+        },
+        {
+            "id": 17,
+            "title": "Roberto Cavalli",
+            "category": "Spicy",
+            "price": 16.98,
+            "count": 1,
+            "totalPrice": 16.98
+        },
+        {
+            "id": 18,
+            "title": "Victoria's Secret",
+            "category": "Vigorous",
+            "price": 23.14,
+            "count": 1,
+            "totalPrice": 23.14
+        },
+        {
+            "id": 19,
+            "title": "Woodwick",
+            "category": "Sweet",
+            "price": 28.90,
+            "count": 1,
+            "totalPrice": 28.90
+        },
+        {
+            "id": 20,
+            "title": "Cerruti",
+            "category": "Spicy",
+            "price": 29.99,
+            "count": 1,
+            "totalPrice": 29.99
+        },
+        {
+            "id": 21,
+            "title":"Cuba Paris",
+            "category": "Bitter",
+            "price": 23.34,
+            "count": 1,
+            "totalPrice": 23.34
+        },
+        {
+            "id": 22,
+            "title": "Dove",
+            "category": "Bitter",
+            "price": 21.31,
+            "count": 1,
+            "totalPrice": 21.31
+        },
+        {
+            "id": 23,
+            "title": "Elie Saab",
+            "category": "Sweet",
+            "price": 24.58,
+            "count": 1,
+            "totalPrice": 24.58
+        },
+        {
+            "id": 24,
+            "title": "Fanola",
+            "category": "Vigorous",
+            "price": 26.35,
+            "count": 1,
+            "totalPrice": 26.35
+        },
+        {
+            "id": 25,
+            "title": "Jimmy Choo",
+            "category": "Vigorous",
+            "price": 17.44,
+            "count": 1,
+            "totalPrice": 17.44
+        },
+        {
+            "id": 26,
+            "title": "Kenzo",
+            "category": "Bitter",
+            "price": 19.90,
+            "count": 1,
+            "totalPrice": 19.90
+        },
+        {
+            "id": 27,
+            "title": "L'Oreal",
+            "category": "Spicy",
+            "price": 15.25,
+            "count": 1,
+            "totalPrice": 15.25
+        },
+        {
+            "id": 28,
+            "title": "Moncler",
+            "category": "Spicy",
+            "price": 12.78,
+            "count": 1,
+            "totalPrice": 12.78
+        },
+        {
+            "id": 29,
+            "title": "Tommy Hilfiger",
+            "category": "Sweet",
+            "price": 16.35,
+            "count": 1,
+            "totalPrice": 16.35
         }
     ]
 }

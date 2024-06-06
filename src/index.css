@@ -376,6 +376,7 @@ a{
 .sectionPerfumes__inner{
   display: flex;
   gap:50px;
+  margin-bottom: 100px;
 }
 .sectionPerfumes__filterBar{
   max-width: 200px;
@@ -495,4 +496,65 @@ a{
 }
 .perfumesBlock__item-btn:hover{
   opacity: 0.5;
+}
+
+.mainBlock__pages{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.mainBlock__pages-page{
+  color:#000;
+  background-color: #fff;
+  padding: 10px 12px;
+  text-align: center;
+  border-top:1px solid #898989;
+  border-bottom:1px solid #898989;
+  border-left: 1px solid #898989;
+  border-right: none;
+  cursor: pointer;
+}
+.mainBlock__pages-page--active{
+  color:#fff;
+  background-color: #4D2952;
+}
+.mainBlock__pages-prevPage{
+  color:#000;
+  background-color: #fff;
+  padding: 10px 12px;
+  text-align: center;
+  border-top:1px solid #898989;
+  border-bottom:1px solid #898989;
+  border-left: 1px solid #898989;
+  border-right: none;
+  cursor: pointer;
+}
+.mainBlock__pages-nextPage{
+  color:#000;
+  background-color: #fff;
+  padding: 10px 12px;
+  text-align: center;
+  border:1px solid #898989;
+  cursor: pointer;
+}
+.mainBlock__pages-dots{
+  color:#000;
+  background-color: #fff;
+  padding: 8px 9px;
+  text-align: center;
+  border-top:1px solid #898989;
+  border-bottom:1px solid #898989;
+  border-left: 1px solid #898989;
+  border-right: none;
+}
+.mainBlock__pages-lastPage{
+  color:#000;
+  background-color: #fff;
+  padding: 10px 12px;
+  text-align: center;
+  border-top:1px solid #898989;
+  border-bottom:1px solid #898989;
+  border-left: 1px solid #898989;
+  border-right: none;
+  cursor: pointer;
 }
