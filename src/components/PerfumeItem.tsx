@@ -15,6 +15,7 @@ const PerfumeItem = ({perfume}:IPerfumeProps) => {
                 <input type="number" className="perfumesBlock__item-inputCount" min="1" max="100" />
                 <button className="perfumesBlock__countBlock-btnMinus">{'-'}</button>
             </div> */}
+            <p className="perfumesBlock__item-category">{perfume.category}</p>
             <p className="perfumesBlock__item-price">${perfume.price}</p>
             <button className="perfumesBlock__item-btn">Add to Cart</button>
         </div>

@@ -400,6 +400,11 @@ a{
   font-weight: 400;
   color:#6d6d6d;
   cursor:pointer;
+  transition:all .3s ease-in-out;
+}
+.filterBar__item-text--active{
+  color:#000;
+  font-size: 16px;
 }
 .filterBar__titleAbout{
   text-transform: uppercase;
@@ -463,6 +468,11 @@ a{
   padding: 10px;
   text-align: center;
   max-width: 300px;
+}
+.perfumesBlock__item-category{
+  margin-bottom: 10px;
+  font-weight: 400;
+  color:#6d6d6d;
 }
 .perfumesBlock__item-img{
   margin-bottom: 5px;
@@ -557,4 +567,123 @@ a{
   border-left: 1px solid #898989;
   border-right: none;
   cursor: pointer;
+}
+.sectionCart__subtitle{
+  font-size: 16px;
+  color:#6d6d6d;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.sectionCart__title{
+  font-size: 24px;
+  color:#000;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.sectionCart__table{
+  margin-bottom: 400px;
+}
+.sectionCart__table-list{
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr 0.5fr;
+  border-bottom: 1px solid #898989;
+  padding-bottom: 15px;
+}
+.table__item-title{
+  color:#6d6d6d;
+  font-size: 18px;
+}
+.sectionCart__table-product{
+  padding: 15px 5px;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr 0.5fr;
+}
+.table__product-itemFirstBlock{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.product__info-title{
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.product__info-category{
+  margin-top: 10px;
+  font-size: 16px;
+  color:#898989;
+}
+.table__product-priceBlock{
+  display: flex;
+  align-items: center;
+}
+.table__product-price,
+.table__product-totalPrice{
+  text-align: center;
+  font-weight: 600;
+  color:#000;
+  font-size: 20px;
+}
+.table__product-amountBlock{
+  display: flex;
+  align-items: center;
+}
+
+/* убираем внутренние стрелки инпута по умолчанию */
+.product__amountBlock-input::-webkit-inner-spin-button,
+.product__amountBlock-input::-webkit-outer-spin-button{
+  appearance: none;
+}
+
+.product__amountBlock-amountInputBlock{
+  position: relative;
+}
+
+.product__amountBlock-input{
+  border:1px solid #898989;
+  padding: 10px 20px;
+  text-align: center;
+  outline: none;
+}
+.product__amountBlock-plusBtn,
+.product__amountBlock-minusBtn{
+  border:none;
+  background-color: #fff;
+  color:#6d6d6d;
+  cursor:pointer;
+}
+.product__amountBlock-plusBtn{
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  padding: 2px;
+  font-size: 18px;
+}
+.product__amountBlock-minusBtn{
+  font-size: 20px;
+  padding: 2px;
+  position: absolute;
+  bottom: 7px;
+  left: 10px;
+}
+.table__product-totalPriceBlock{
+  display: flex;
+  align-items: center;
+}
+.table__product-deleteBtn{
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px 10px;
+  border:1px solid #6d6d6d;
+  font-size: 18px;
+  cursor:pointer;
+}
+.table__product-deleteBtnBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

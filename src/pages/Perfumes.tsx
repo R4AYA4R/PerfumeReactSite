@@ -7,6 +7,8 @@ import { getPagesArray } from "../utils/getPagesArray";
 
 const Perfumes = () => {
 
+    const [category,setCategory] = useState('');
+
     const [page, setPage] = useState(1); // состояние для страницы,на какой странице сейчас пользователь
 
     const [limit, setLimit] = useState<number>(4); // состояние для лимита страниц
@@ -28,18 +30,37 @@ const Perfumes = () => {
     const { data, isLoading, refetch } = useQuery({
         queryKey: ['perfumes'],
         queryFn: async () => {
-            const response = await axios.get<IPerfumesData[]>(`http://localhost:5000/perfumes?title_like=${searchValue}`, {
-                params: {
-                    _limit: limit,
-                    _page: page
-                }
-            }); // на своем json server не работает поиск по title_like пока что,потому что его не сделали еще в последней версии json server,нужно установить версию 0.17.4 json-server,чтобы работало 
+            // если category равна пустой строке, то запрос на сервер без category в url,в другом случае,запрос с category в url
+            if(category === ''){
+                const response = await axios.get<IPerfumesData[]>(`http://localhost:5000/perfumes?title_like=${searchValue}`, {
+                    params: {
+                        _limit: limit,
+                        _page: page
+                    }
+                }); // на своем json server не работает поиск по title_like пока что,потому что его не сделали еще в последней версии json server,нужно установить версию 0.17.4 json-server,чтобы работало 
 
-            const totalCount = data?.headers['x-total-count']; // записываем общее количество объектов(в данном случае объектов для порфюмов),полученных от сервера в переменную
+                const totalCount = data?.headers['x-total-count']; // записываем общее количество объектов(в данном случае объектов для порфюмов),полученных от сервера в переменную
 
-            setTotalPages(Math.ceil(totalCount / limit)); //с помощью Math.ceil округляем получившееся значение в большую сторону,например,если элементов 105,а лимит 10,то округляем получившееся деление до 11,чтобы получить 11 страниц и вывести потом оставшиеся элементы на эту (11-ую в данном случае) страницу
+                setTotalPages(Math.ceil(totalCount / limit)); //с помощью Math.ceil округляем получившееся значение в большую сторону,например,если элементов 105,а лимит 10,то округляем получившееся деление до 11,чтобы получить 11 страниц и вывести потом оставшиеся элементы на эту (11-ую в данном случае) страницу
+    
+                return response;
 
-            return response;
+            }else{
+                const response = await axios.get<IPerfumesData[]>(`http://localhost:5000/perfumes?title_like=${searchValue}&category=${category}`, {
+                    params: {
+                        _limit: limit,
+                        _page: page
+                    }
+                }); // на своем json server не работает поиск по title_like пока что,потому что его не сделали еще в последней версии json server,нужно установить версию 0.17.4 json-server,чтобы работало 
+
+                const totalCount = data?.headers['x-total-count']; // записываем общее количество объектов(в данном случае объектов для порфюмов),полученных от сервера в переменную
+
+                setTotalPages(Math.ceil(totalCount / limit)); //с помощью Math.ceil округляем получившееся значение в большую сторону,например,если элементов 105,а лимит 10,то округляем получившееся деление до 11,чтобы получить 11 страниц и вывести потом оставшиеся элементы на эту (11-ую в данном случае) страницу
+    
+                return response;
+            }
+            
+           
         }
     })
 
@@ -70,14 +91,42 @@ const Perfumes = () => {
         }
     }
 
-    // делаем запрос через useQuery еще раз,при изменении page(состояния текущей страницы),и data?.data (массив пользователей),и изменении инпута поиска
+    // функции для изменения категорий
+    const categoryAll=()=>{
+        setCategory('');
+        setPage(1);
+    }
+
+    const categorySpicy=()=>{
+        setCategory('Spicy');
+        setPage(1);
+    }
+    const categorySweet=()=>{
+        setCategory('Sweet');
+        setPage(1);
+    }
+    const categoryBitter=()=>{
+        setCategory('Bitter');
+        setPage(1);
+    }
+    const categoryVigorous=()=>{
+        setCategory('Vigorous');
+        setPage(1);
+    }
+
+    // при изменении searchValue,то есть когда пользователь что-то вводит в инпут поиска,то изменяем category на пустую строку,соответственно будет сразу идти поиск по всем товарам,а не в конкретной категории,но после поиска можно будет результат товаров по поиску уже отфильтровать по категориям
+    useEffect(()=>{
+        setCategory('');
+    },[searchValue])
+
+    // делаем запрос через useQuery еще раз,при изменении page(состояния текущей страницы),data?.data (массив пользователей),изменении инпута поиска и category(категории товаров)
     useEffect(() => {
 
         refetch();
 
         refetchWithoutLimit(); // обновляем данные о всех товарах без лимита
 
-    }, [searchValue, page, data?.data])
+    }, [searchValue, page, data?.data,category])
 
     let pagesArray = getPagesArray(totalPages, page);
 
@@ -90,19 +139,34 @@ const Perfumes = () => {
                             <h3 className="filterBar__title">Categories</h3>
                             <ul className="filterBar__list">
                                 <li className="filterBar__list-item">
-                                    <p className="filterBar__item-text">All ({dataWithoutLimit?.data.length})</p>
+                                    <p 
+                                        className={category === '' ? "filterBar__item-text filterBar__item-text--active" : 'filterBar__item-text'}
+                                        onClick={categoryAll}
+                                    >All ({dataWithoutLimit?.data.length})</p>
                                 </li>
                                 <li className="filterBar__list-item">
-                                    <p className="filterBar__item-text">Spicy ({filteredSpicy?.length})</p>
+                                    <p 
+                                        className={category === 'Spicy' ? "filterBar__item-text filterBar__item-text--active" : 'filterBar__item-text'}
+                                        onClick={categorySpicy}
+                                    >Spicy ({filteredSpicy?.length})</p>
                                 </li>
                                 <li className="filterBar__list-item">
-                                    <p className="filterBar__item-text">Sweet ({filteredSweet?.length})</p>
+                                    <p 
+                                        className={category === 'Sweet' ? "filterBar__item-text filterBar__item-text--active" : 'filterBar__item-text'} 
+                                        onClick={categorySweet}
+                                    >Sweet ({filteredSweet?.length})</p>
                                 </li>
                                 <li className="filterBar__list-item">
-                                    <p className="filterBar__item-text">Bitter ({filteredBitter?.length})</p>
+                                    <p 
+                                        className={category === 'Bitter' ? "filterBar__item-text filterBar__item-text--active" : 'filterBar__item-text'}
+                                        onClick={categoryBitter}
+                                    >Bitter ({filteredBitter?.length})</p>
                                 </li>
                                 <li className="filterBar__list-item">
-                                    <p className="filterBar__item-text">Vigorous ({filteredVigorous?.length})</p>
+                                    <p 
+                                        className={category === 'Vigorous' ? "filterBar__item-text filterBar__item-text--active" : 'filterBar__item-text'}
+                                        onClick={categoryVigorous}
+                                    >Vigorous ({filteredVigorous?.length})</p>
                                 </li>
                             </ul>
                             <h4 className="filterBar__titleAbout">About Women`s perfume</h4>
@@ -155,7 +219,7 @@ const Perfumes = () => {
                                 {totalPages > 5 && page < totalPages - 2 && <div className="mainBlock__pages-dots">...</div>}
 
                                 {/* если общее количество страниц больше 3 и текущая страница меньше общего количества страниц - 1,то отображаем кнопку последней страницы */}
-                                {totalPages > 3 && page < totalPages - 1 && <button className="mainBlock__pages-lastPage"
+                                {totalPages > 5 && page < totalPages - 1 && <button className="mainBlock__pages-lastPage"
                                 onClick={()=>setPage(totalPages)}>{totalPages}</button>}
 
                                 <button className="mainBlock__pages-nextPage"
