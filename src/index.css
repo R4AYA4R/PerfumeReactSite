@@ -469,6 +469,9 @@ a{
   text-align: center;
   max-width: 300px;
 }
+.perfumesBlock__cartTitle{
+  color:#898989;
+}
 .perfumesBlock__item-category{
   margin-bottom: 10px;
   font-weight: 400;
@@ -584,7 +587,7 @@ a{
   margin-bottom: 70px;
 }
 .sectionCart__table{
-  margin-bottom: 400px;
+  border-bottom:1px solid #898989;
 }
 .sectionCart__table-list{
   display: grid;
@@ -686,4 +689,15 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.perfumesItems__titleEmpty{
+  color:#6d6d6d;
+  margin: 10px 0 400px 0;
+}
+.sectionCart__totalCheckBlock{
+  margin-bottom: 200px;
+}
+.totalCheck__title{
+  margin: 15px 0;
+  color:#6d6d6d;
 }

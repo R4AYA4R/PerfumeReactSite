@@ -1,6 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import { apiBasket } from "../store/apiBasket";
 
 const Header = ()=>{
+
+    const {data} = apiBasket.useGetAllPerfumesBasketQuery(null);
+
     return(
         <header className="header">
             <div className="container">
@@ -18,7 +22,7 @@ const Header = ()=>{
                         <li className="header__menu-item">
                             <NavLink to="/cart" className={({isActive}) => isActive ? 'menu__item-link menu__item-linkCart menu__item-link--active' : 'menu__item-link menu__item-linkCart'}>
                                 <img src="/images/header/Card.png" alt="" className="menu__link-img" />
-                                <span className="menu__link-spanCart">0</span>
+                                <span className="menu__link-spanCart">{data?.length}</span>
                             </NavLink>
                         </li>
                     </ul>
